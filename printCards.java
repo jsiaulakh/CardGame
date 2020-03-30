@@ -1,4 +1,7 @@
 package cardgameweek4;
+
+import java.util.ArrayList;
+
 /**
  * A class to handle the user interaction for the Card
  * project. Contains a main method that generates a card hand
@@ -9,12 +12,14 @@ public class printCards {
    // Main Class For Program Execution
 	public static void main(String[] args) {
 		CardHand ch = new CardHand();
-                ch.generateHand();
-                for(Card c: ch.cards)
-                {
-                    System.out.println(c.getValue() + " of " + c.getSuit());
-                }
-               // System.out.println(ch.cards); show what happens when there is no toString()
-	}
+		ch.generateHand();
 
+		Player p1 = new Player(ch.cards_1);
+		Player p2 = new Player(ch.cards_2);
+		// p1.display();
+		// p2.display();
+                
+		Play playground = new Play(p1,p2);
+		playground.play();
+	}
 }
