@@ -1,6 +1,6 @@
-package cardgameweek4;
+package cardgame4;
 
-import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  * A class to handle the user interaction for the Card
@@ -13,9 +13,16 @@ public class printCards {
 	public static void main(String[] args) {
 		CardHand ch = new CardHand();
 		ch.generateHand();
+                Scanner input = new Scanner(System.in);
+                System.out.println("Let Begin The Fun :");
+                System.out.println("Enter The Name Of Player 1 :");
+                String n1 = input.next();
+                System.out.println("Enter The Name Of Player 2 :");
+                String n2 = input.next();
 
-		Player p1 = new Player(ch.cards_1);
-		Player p2 = new Player(ch.cards_2);
+
+		Player p1 = new Player(ch.cards_1,n1);
+		Player p2 = new Player(ch.cards_2,n2);
 		// p1.display();
 		// p2.display();
                 

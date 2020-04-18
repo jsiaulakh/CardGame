@@ -1,4 +1,4 @@
-package cardgameweek4;
+package cardgame4;
 
 
 public class Play{
@@ -13,8 +13,8 @@ public class Play{
 		while(this.p1.cards.size() > 0 && this.p2.cards.size() > 0) {
 			Card c1 = this.p1.cards.remove();
 			Card c2 = this.p1.cards.remove();
-			System.out.println("player 1 throw : "+ c1);
-			System.out.println("player 2 throw : "+ c2);
+			System.out.println(p1.getName() +" throws : "+ c1);
+			System.out.println(p2.getName() + " throw : "+ c2);
 			if(c1.getValue().compareTo(c2.getValue()) < 0) {
 				this.p2.score+=1;
 			}
@@ -25,9 +25,9 @@ public class Play{
 		System.out.println();
 
 		if(p1.score > p2.score) {
-			System.out.println("Player 1 wins with " + (p1.score - p2.score) + " score");
+			System.out.println(p1.getName()+ " wins with " + (p1.score - p2.score) + " score");
 		} else if(p1.score < p2.score) {
-			System.out.println("Player 2 wins with " + (p2.score - p1.score) + " score");
+			System.out.println(p2.getName() +" wins with " + (p2.score - p1.score) + " score");
 		} else {
 			System.out.println("Match draw");
 		}

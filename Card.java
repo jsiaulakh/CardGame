@@ -1,4 +1,4 @@
-package cardgameweek4;
+package cardgame4;
 /**
  * Starter code for the Card class.
  * 
